@@ -27,15 +27,16 @@ export const themeOptions = {
   palette: {
     type: "light",
     primary: {
-      main: "#FEEA36",
+      main: "#044FC7",
     },
     secondary: {
-      main: "#f5a304",
+      main: "#b644b7",
     },
     background: {
       default: "#151315",
       paper: "#151315",
       light: "#F2F4F7",
+      navbar: "#17191C",
     },
     text: {
       primary: "#ffffff",
@@ -48,7 +49,7 @@ export const themeOptions = {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: "20px", // Adjust the value to your preferred roundness
+          borderRadius: "8px", // Adjust the value to your preferred roundness
           padding: "10px 20px",
         },
       },

@@ -21,7 +21,6 @@ export default function AboutMe({
     <Paper
       id="about"
       sx={{
-        marginTop: 10,
         marginBottom: 10,
         padding: "80px 0px 140px 0px",
         backgroundColor: "background.light",

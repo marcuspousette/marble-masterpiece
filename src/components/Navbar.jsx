@@ -13,6 +13,8 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
+import Button from "@mui/material/Button";
+import { Stack } from "@mui/material";
 import { NavHashLink } from "react-router-hash-link";
 
 const drawerWidth = 240;
@@ -22,6 +24,14 @@ const navItems = [
   { text: "Omdömen", path: "/#reviews" },
   { text: "Kontakt", path: "/#contact" },
 ];
+
+const navbarStyle = {
+  padding: 1,
+  borderRadius: 100,
+  backgroundColor: "background.navbar",
+  border: "solid, 1px #37393C",
+  transform: "translateY(14px)",
+};
 
 export default function Navbar(props) {
   const { window } = props;
@@ -62,7 +72,12 @@ export default function Navbar(props) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="transparent" elevation={2}>
+      <AppBar
+        position="static"
+        color="transparent"
+        elevation={2}
+        sx={navbarStyle}
+      >
         <Container>
           <Toolbar
             sx={{
@@ -74,6 +89,25 @@ export default function Navbar(props) {
             <Link to="/">
               <img src={logo} alt="Techover" width={"150px"} />
             </Link>
+            <Stack
+              direction="row"
+              spacing={2}
+              sx={{ display: { sm: "none", md: "block", xs: "none" } }}
+            >
+              {navItems.map((item, i) => (
+                <Button
+                  key={i}
+                  component={NavHashLink}
+                  to={item.path}
+                  smooth
+                  variant="text"
+                  sx={{ color: "text.primary" }}
+                >
+                  {item.text}
+                </Button>
+              ))}
+            </Stack>
+
             <IconButton
               aria-label="open drawer"
               edge="start"

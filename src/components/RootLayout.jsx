@@ -1,7 +1,7 @@
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
-import bg1 from "../assets/grid-peice.png";
+import bg1 from "../assets/background-dark.png";
 import bg2 from "../assets/Swatch.png";
 
 const bgStyle = (top) => ({
@@ -15,7 +15,9 @@ const bgStyle = (top) => ({
 const RootLayout = () => {
   return (
     <Box sx={{ paddingBottom: 20 }}>
-      <Navbar />
+      <Container>
+        <Navbar />
+      </Container>
       <Box component="img" src={bg1} alt="" sx={bgStyle(64)} />
       <Box component="img" src={bg2} alt="" sx={bgStyle(0)} />
       <main>
