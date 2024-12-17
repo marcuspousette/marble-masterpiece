@@ -26,7 +26,6 @@ const navItems = [
 ];
 
 const navbarStyle = {
-  padding: 1,
   borderRadius: 100,
   backgroundColor: "background.navbar",
   border: "solid, 1px #37393C",

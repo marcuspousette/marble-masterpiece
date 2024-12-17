@@ -23,7 +23,7 @@ export default function Hero({
       }}
       spacing={{ xs: 4, md: 4 }}
     >
-      <Grid item xs={8}>
+      <Grid item xs={12} md={8}>
         <Typography
           color="text.primary"
           variant="h2"
@@ -70,8 +70,7 @@ export default function Hero({
         <Stack direction="row" spacing={2} justifyContent={"center"}>
           <Button
             smooth
-            component={NavHashLink}
-            to={cta1.to}
+            onClick={cta1.callback}
             variant="contained"
             color="primary"
           >
@@ -88,7 +87,7 @@ export default function Hero({
           </Button>
         </Stack>
       </Grid>
-      <Grid item xs={10}>
+      <Grid item xs={12} md={10}>
         <Box
           component={"img"}
           src={blueBall}
