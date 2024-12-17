@@ -87,7 +87,7 @@ export default function Hero({
           </Button>
         </Stack>
       </Grid>
-      <Grid item xs={12} md={10}>
+      <Grid item xs={12} md={12}>
         <Box
           component={"img"}
           src={blueBall}
